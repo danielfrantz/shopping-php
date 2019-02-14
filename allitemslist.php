@@ -6,9 +6,9 @@
   </head>
   <body>
     <?php
-        $connect = mysqli_connect("localhost", "root", "gold", "shopping") or die("Please, check your server connection.");
+        $connect = mysqli_connect("localhost", "root", "", "shopping") or die("Please, check your server connection.");
 
-        $query = "SELECT item_code, item_name, description, imagename, price FROMproducts";
+        $query = "SELECT item_code, item_name, description, imagename, price FROM products";
 
         $results = mysqli_query($connect, $query) or die(mysql_error());
 
