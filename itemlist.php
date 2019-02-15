@@ -7,7 +7,7 @@
   <body>
     <?php
       include('menu.php');
-      $connect = mysqli_connect("localhost", "root", "gold", "shopping") or die("Please, check your server connection.");
+      $connect = mysqli_connect("localhost", "root", "", "shopping") or die("Please, check your server connection.");
 
       $category=$_REQUEST['category'];
 

@@ -1,11 +1,13 @@
 <?php
-  // Connect to the database server
-  $MySQLi = new MySQLi("localhost", "root", "", "shopping");
 
-  if ($MySQLi->errno) {
-    printf("Unable to connect to the database:<br /> %s", $MySQLi->error);
-    exit();
-  }
-  else
-    printf("Successfully connected with the MySQL server and shopping database is opened");
+// Connect to database
+$mysqli = new mysqli("localhost","root","","shopping");
+
+if ($mysqli->connect_error) {
+  printf("Não foi possível conectar ao banco: %s\n", $mysqli->connect_error);
+  exit();
+} else {
+  printf("Conectado com sucesso");
+}
+
 ?>
